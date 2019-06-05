@@ -1,0 +1,31 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content %}
+<section class="faq">
+        <div class="container">
+            
+            <div class="faq-item">
+                    <div>
+                            <a href="{% url 'index' %}" class="alt-btn"><i class="fas fa-chevron-left btn-icon"></i> Back to home</a>
+                    </div>
+                <br>
+                <h2 class="faq-h2">Application submitted.</h2>
+                <p class="faq-p">A mortgage broker from 
+                        Money Solutions Inc. (FSCO Broker Licence #10731) will be in touch with you within 4 hours.
+                        
+                        We will work with you to collect basic documentation.
+                        
+                        Once approved, you will be contacted again, and your deal can close in as soon as 5 business days.
+                        <br>
+                        <br>
+                        
+                        Thank you for using 
+                        privatemortgagefinder.com!
+                </p>
+                <br>
+            </div>
+
+    </section>
+
+{% endblock %}

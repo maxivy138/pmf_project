@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<header class="showcase">
+        <!-- <div class="showcase-top">
+            <img src="./assets/img/test_logo.png" alt="" />
+            <a href="./application1.html" class="btn btn-rounded">Apply Now</a>
+        </div> -->
+        <div class="showcase-content">
+            <br>
+            <br>
+            <br>
+            <h1>Get funding fast</h1>
+            <p>Get mortgage funding in 
+                as soon as 3-5 days 
+                for your Ontario property.</p>
+            <br>
+            <a href="/info" class="btn btn-xl"
+                >Find Private Mortgage <i class="fas fa-chevron-right btn-icon"></i
+            ></a>
+        </div>
+</header>
+    <section class="tabs">
+        <div class="container">
+            <div id="tab-1" class="tab-item tab-border">
+                <i class="fas fa-file-alt fa-3x"></i>
+                <p class="hide-sm">Fill application</p>
+            </div>
+            <div id="tab-2" class="tab-item">
+                <i class="fas fa-thumbs-up fa-3x"></i>
+                <p class="hide-sm">Submit to lenders</p>
+            </div>
+            <div id="tab-3" class="tab-item">
+                <i class="fas fa-check-square fa-3x"></i>
+                <p class="hide-sm">Get your mortgage</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tab-content">
+        <div class="container">
+            <!-- Tab Content 1 -->
+            <div id="tab-1-content" class="tab-content-item show">
+                <div class="tab-1-content-inner">
+                    <div>
+                        <p class="text-lg">
+                            Fill out our fast application so we can get an overview of your needs. <br><br>
+                            We do not sell your info to third parties.
+                        </p>
+                        <a href="/info" class="btn btn-lg">Find Private Mortgage</a>
+                    </div>
+                    <img src="{% static 'img/yes.png' %}" alt="" />
+                </div>
+            </div>
+
+            <!-- Tab Content 2 -->
+            <div id="tab-2-content" class="tab-content-item">
+                <div class="tab-2-content-top">
+                    <p class="text-lg">
+                        Once submitted, a mortgage broker from our partner brokerage,
+                        Money Solutions Inc. (FSCO #10731) will contact you within 4 hours.<br><br>
+                        You will receive the best loan offers from over 100 private mortgage 
+                        lenders.
+                    </p>
+
+                    <a href="/info" class="btn btn-lg">Find Private Mortgage</a>
+                </div>
+                
+            </div>
+
+            <!-- Tab Content 3 -->
+            <div id="tab-3-content" class="tab-content-item">
+                <div class="text-center">
+                    <p class="text-lg">
+                        <!-- Choose one plan and watch everything on Netflix. -->
+                        Get your refinance, 2nd mortgage or new home purchase 
+                        approved in as little as 3-5 business days.
+
+
+                    </p>
+                    <a href="/info" class="btn btn-lg">Find Private Mortgage</a>
+                </div>
+
+                <!-- <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Basic</th>
+                            <th>Standard</th>
+                            <th>Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monthly price after free month ends on 6/19/19</td>
+                            <td>$8.99</td>
+                            <td>$12.99</td>
+                            <td>$15.99</td>
+                        </tr>
+                        <tr>
+                            <td>HD Available</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Ultra HD Available</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Screens you can watch on at the same time</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Watch on your laptop, TV, phone and tablet</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Unlimited movies and TV shows</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Cancel anytime</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>First month free</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                    </tbody>
+                </table> -->
+            </div>
+        </div>
+    </section>
+
+    {% endblock %}

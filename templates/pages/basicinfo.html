@@ -1,0 +1,199 @@
+{% extends 'base2.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="wrapper">
+        <div class="contact">
+        <form action="{% url 'info' %}" method="POST" id="info-form">
+                
+                    <h1 class="brand, full">
+                        Select financing type.
+                    </h1>
+                    {% csrf_token %}
+
+                    <div class="boxed">
+                        <input type="radio" id="refinance" name="financetype" value="refinance">
+                        <label for="refinance">Refinance</label>
+                    </div>
+                    <div class="boxed">
+                        <input type="radio" id="2ndmortgage" name="financetype" value="2ndmortgage">
+                        <label for="2ndmortgage">2nd Mortgage</label>
+                    </div>
+                    
+                    <h1 class="brand, full">
+                        Estimate your credit.
+                    </h1>
+                    {% csrf_token %}
+                    <div class="boxed">
+                        <input type="radio" id="excellent" name="credittype" value="excellent">
+                        <label for="excellent">Excellent</label>
+                    </div>
+                    <div class="boxed">
+                        <input type="radio" id="good" name="credittype" value="good">
+                        <label for="good">Good</label>
+                    </div>
+                    <div class="boxed">
+                        <input type="radio" id="fair" name="credittype" value="fair">
+                        <label for="fair">Fair</label>
+                    </div>
+                    <div class="boxed">
+                        <input type="radio" id="poor" name="credittype" value="poor">
+                        <label for="poor">Poor</label>
+                    </div>
+
+
+                    <h1 class="brand, full">
+                            Your property's value.
+                    </h1>
+                    {% csrf_token %}
+                    <div class="full">
+                        <p>
+                            <input type="number" name="propvalue" placeholder="Enter property value" class="form-control" id="dropdown" required>
+                        </p>
+                    </div>
+
+
+                    <h1 class="brand, full">
+                        Your 1st mortgage balance and interest rate.
+                    </h1>
+                    {% csrf_token %}
+                    <div class="full">
+                        <p>
+                            <input type="text" name="firstmortgagebalance" placeholder="Enter 1st mortgage balance" class="form-control" id="dropdown" required>
+                        </p>
+                    </div>
+                    <div class="full">
+                        <p>
+                                <input type="text" name="firstmortgagerate" placeholder="Enter 1st mortgage interest rate" class="form-control" id="dropdown" required>
+                        </p>
+                    </div>
+
+                <div id="secondmortgage" class="full">
+                        <h1 class="brand, full">
+                            Your 2nd mortgage balance and interest rate.
+                        </h1>
+                        {% csrf_token %}
+                        <div class="full">
+                            <p>
+                                <input type="text" name="secondmortgagebalance" placeholder="Enter 2nd mortgage balance" class="form-control" id="dropdown">
+                            </p>
+                        </div>
+                        <br>
+                        <div class="full">
+                            <p>
+                                    <input type="text" name="secondmortgagerate" placeholder="Enter 2nd mortgage interest rate" class="form-control" id="dropdown">
+                            </p>
+                        </div>
+                </div>
+
+                        <h1 class="brand, full">
+                            How much are you approximately looking to borrow?
+                        </h1>
+                        {% csrf_token %}
+                        <div class="full">
+                            <p>
+                                <input type="text" name="borrowamount" placeholder="Enter desired amount" class="form-control" id="dropdown" required>
+                            </p>
+                        </div>
+
+                        <h1 class="brand, full">
+                            Your income type.
+                        </h1>
+                        {% csrf_token %}
+                        <div class="full">
+                            <select name="incometype" class="full" id="dropdown">
+                                <option value="selector">Select income type</option>
+                                <option value="salaried">Salaried</option>
+                                <option value="selfemployed">Self-employed</option>
+                                <option value="contractual">Contractual</option>
+                                <option value="seasonal">Seasonal</option>
+                                <option value="noincome">No income</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <h1 class="brand, full">
+                                Your yearly gross income.
+                        </h1>
+                        {% csrf_token %}
+                        <div class="full">
+                            <p>
+                                <input type="text" name="incomerange" placeholder="Enter yearly gross income" class="form-control" id="dropdown" required>
+                            </p>
+                        </div>
+
+                        <h1 class="brand, full">
+                            Enter personal info.
+                        </h1>
+                        <h4 class="full">
+                            Once submitted, a mortgage broker from Money Solutions Inc. (FSCO Broker Licence #10731) will be in touch with you within 4 hours to get more information. If your application is approved, they will need to:
+                        </h4>
+                        <ul class="full">
+                            <li> - Collect personal documentation</li>
+                            <li> - Collect property documentation</li>
+                        </ul>
+                        <h3 class="full">
+                                Your deal can close in as soon as 5 business days.
+                        </h3>
+                            <div class="full">
+                                        {% csrf_token %}
+                                    <p>
+                                        <label>First Name</label>
+                                        <input type="text" name="firstname" placeholder="Enter first name" class="form-control" required>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <label>Last Name</label>
+                                        <input type="text" name="lastname" placeholder="Enter last name" class="form-control" required>
+                                    </p>
+                                    <br>
+                                    <p class="full">
+                                        <label>Address</label>
+                                        <input type="text" name="address" placeholder="Enter street address" class="form-control" required>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <label>City</label>
+                                        <input type="text" name="city" placeholder="Enter property city" class="form-control" required>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <label>Postal Code</label>
+                                        <input type="text" name="postalcode" placeholder="Enter postal code" class="form-control" required>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <label>Email</label>
+                                        <input type="text" name="email" placeholder="Enter your email" class="form-control" required>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <label>Phone Number</label>
+                                        <input type="text" name="phone" placeholder="Enter your phone number" class="form-control" required>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <button action="{% url 'info' %}" method="POST" class="btn btn-block btn-secondary, full">Submit Form</button>
+                                    </p>
+                            </div>
+        </form>
+    </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+   $('input[name=financetype]').change(function() {
+       var value = $('input[name=financetype]:checked').val()
+       if (value == 'refinance') {
+           $('#secondmortgage').hide()
+       } else {
+           $('#secondmortgage').show()
+       }
+   })
+})
+</script>
+{% endblock %}

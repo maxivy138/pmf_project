@@ -1,0 +1,58 @@
+body {
+    font-family: futura, sans-serif;
+}
+
+#header {
+    font-family: futura, sans-serif;
+    background: #fff;
+    color: #4A90E2;
+    height: 50px;
+    border-bottom: 1px solid #4a90E2;
+}
+
+#branding h1{
+    color: #4A90E2;
+}
+
+#header a:link,
+#header a:visited {
+    color: #00479A;
+}
+
+a:link,
+a:visited {
+    color: #00479A;
+}
+
+div.breadcrumbs {
+    background: #4a90E2;
+}
+
+#changelist-filter h2 {
+    background: #4a90E2;
+}
+
+.object-tools a.addlink {
+    background: #50E3C2;
+}
+
+
+element.style {
+}
+.module h2, .module caption, .inline-group h2 {
+    background: #4a90E2;
+}
+
+
+
+.object-tools a:link, .object-tools a:visited {
+    background: #50E3C2;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #50E3C2;
+}
+
+.field-is-staff {
+    background-image: url('https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwilxZfOiMHiAhWpuFkKHUeQB5YQjRx6BAgBEAU&url=https%3A%2F%2Fwww.carlogos.org%2FCar-Logos%2FAMG-logo.html&psig=AOvVaw3Tt9Nw-83z0mNf-SylZIIr&ust=1559230558110866');
+}
