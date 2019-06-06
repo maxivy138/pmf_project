@@ -20,8 +20,8 @@ def contact(request):
         send_mail(
             'PMF | Contact Form',
             'There has been an inquiry for a private mortgage. Check out your admin panel.',
-            'maxivymax@gmail.com',
-            ['maxivymax@gmail.com'],
+            'contact@privatemortgagefinder.com',
+            ['contact@privatemortgagefinder.com'],
             fail_silently=False
         )
 
@@ -29,7 +29,7 @@ def contact(request):
         send_mail(
             'PrivateMortgageFinder.com | Your request has been received',
             'Thank you for your inquiry.',
-            'info@privatemortgagefinder.com',
+            'contact@privatemortgagefinder.com',
             [ email ],
             fail_silently=False
         )
