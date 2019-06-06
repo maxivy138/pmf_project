@@ -38,7 +38,7 @@ def info(request):
 
         # Send email
         send_mail(
-            'PMF | Application Submission,
+            'PMF | Application Submission',
             'Thank you for filling out the application. A mortgage broker will be in touch with you shortly.',
             'info@privatemortgagefinder.com',
             [ email ],
