@@ -31,8 +31,8 @@ def info(request):
         send_mail(
             'PMF | Application Form',
             'There has been an inquiry for a private mortgage. Check out your admin panel.',
-            'maxivymax@gmail.com',
-            ['maxivymax@gmail.com'],
+            'contact@privatemortgagefinder.com',
+            ['contact@privatemortgagefinder.com'],
             fail_silently=False
         )
 
