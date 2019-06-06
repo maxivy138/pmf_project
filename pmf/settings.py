@@ -25,7 +25,7 @@ SECRET_KEY = 'i=7p7^q6&lm=5knq*zh5s9dat#z0-5d80hbsb@!i-fqo92yy!_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['178.128.238.3']
+ALLOWED_HOSTS = ['178.128.238.3', 'privatemortgagefinder.com']
 
 
 # Application definition
