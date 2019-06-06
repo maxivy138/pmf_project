@@ -38,8 +38,8 @@ def info(request):
 
         # Send email
         send_mail(
-            'Thanks for filling it out!',
-            'fkgfhsdhjfhjdsfh ccocks cokcos cocks .',
+            'PMF | Application Submission,
+            'Thank you for filling out the application. A mortgage broker will be in touch with you shortly.',
             'info@privatemortgagefinder.com',
             [ email ],
             fail_silently=False
