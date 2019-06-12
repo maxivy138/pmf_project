@@ -14,6 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls import url
+from django.http import HttpResponse
 from django.urls import path, include
 
 urlpatterns = [
@@ -22,4 +24,5 @@ urlpatterns = [
     path('contact/', include('contacts.urls')),
     path('info/', include('basicinfo.urls')),
     path('admin/', admin.site.urls),
+    url(r'^robots.txt', lambda x: HttpResponse("User-Agent: *\nDisallow:", content_type="text/plain"), name="robots_file")
 ]

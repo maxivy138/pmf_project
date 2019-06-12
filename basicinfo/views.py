@@ -1,6 +1,12 @@
 from django.shortcuts import render, redirect
 from .models import Info
 from django.core.mail import send_mail
+import os
+import json
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
+from django.conf import settings
+
 
 def info(request):
 #     import ipdb; ipdb.set_trace()
@@ -36,14 +42,23 @@ def info(request):
             fail_silently=False
         )
 
-        # Send email
-        send_mail(
-            'PMF | Application Submission',
-            'Thank you for filling out the application. A mortgage broker will be in touch with you shortly.',
-            'contact@privatemortgagefinder.com',
-            [ email ],
-            fail_silently=False
-        )
+        # # Send email
+        # send_mail(
+        #     'PMF | Application Submission',
+        #     'Thank you for filling out the application. A mortgage broker will be in touch with you shortly.',
+        #     'contact@privatemortgagefinder.com',
+        #     [ email ],
+        #     fail_silently=False
+        # )
+
+        message = Mail(
+            from_email='contact@privatemortgagefinder.com',
+            to_emails= email,
+            html_content='a q p')
+       
+        message.template_id = 'd-7e9ca5dd8c334d22ada43ce78530a402'
+        sendgrid_client = SendGridAPIClient(settings.SENDGRID_API_KEY)
+        response = sendgrid_client.send(message)
 
         return render(request, 'pages/sendsuccessed.html')
 
